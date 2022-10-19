@@ -9,7 +9,7 @@ pipeline {
                 echo 'hello world'
                 echo 'testando a pipeline'
                 def x = 'dyego'
-                printf x
+                println(x)
             }
         }
     }
