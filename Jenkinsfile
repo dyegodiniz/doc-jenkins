@@ -1,14 +1,10 @@
-node {
-    checkout scm
-
-    echo 'test'
-
-    def x = 'Dyego'
-    println(x)
-
-    def y = 'Souza'
-    println("$x $y")
-
-    env
-
+pipeline {
+    agent any
+    stages {
+        stage('Example') {
+            steps {
+                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
+            }
+        }
+    }
 }
