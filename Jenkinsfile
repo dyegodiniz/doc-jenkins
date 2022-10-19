@@ -6,6 +6,7 @@ pipeline {
             steps {
                 echo 'hello world'
                 echo 'testando a pipeline'
+                echo "$WORKSPACE e $BUILD_NUMBER"
             }
         }
     }
