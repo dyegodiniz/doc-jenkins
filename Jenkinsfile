@@ -2,11 +2,19 @@ pipeline {
     agent any
 
     stages {
-        stage('Stage 1') {
+        stage('Build') {
             steps {
-                echo 'hello world'
-                echo 'testando a pipeline'
-                echo "$WORKSPACE e $BUILD_NUMBER"
+                echo 'Building...'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying...'
             }
         }
     }
