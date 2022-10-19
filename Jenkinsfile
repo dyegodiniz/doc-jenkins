@@ -6,6 +6,8 @@ pipeline {
             steps {
                 echo 'hello world'
                 echo 'testando a pipeline'
+                def x = 'dyego'
+                printf x
             }
         }
     }
