@@ -9,4 +9,6 @@ node {
     def y = 'Souza'
     println("$x $y")
 
+    env
+
 }
