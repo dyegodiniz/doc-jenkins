@@ -3,6 +3,10 @@ node {
 
     echo 'test'
 
-    def x = 'dyego'
+    def x = 'Dyego'
     println(x)
+
+    def y = 'Souza'
+    println("$x $y")
+
 }
