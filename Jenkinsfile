@@ -1,5 +1,3 @@
-#!/usr/bin/env groovy
-
 pipeline {
     agent any
 
@@ -8,8 +6,6 @@ pipeline {
             steps {
                 echo 'hello world'
                 echo 'testando a pipeline'
-                def x = 'dyego'
-                println(x)
             }
         }
     }
