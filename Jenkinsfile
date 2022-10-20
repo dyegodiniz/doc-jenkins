@@ -3,7 +3,8 @@ node {
 
     checkout scm
 
-    docker.image('bitnami/php-fpm:latest').inside("-e COMPOSER_HOME=/tmp/jenkins-workspace --name=server1") {
+    //docker.image('bitnami/php-fpm:latest').inside("-e COMPOSER_HOME=/tmp/jenkins-workspace --name=server1") {
+      docker.image('nginx:latest').inside("--name=nginx") {
 
       stage("Build") {
         sh "echo 'building...'"
