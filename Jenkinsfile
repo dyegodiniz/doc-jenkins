@@ -29,6 +29,6 @@ node {
   }
 
   // Clean up workspace
-  step([$class: 'WsCleanup'])
+  //step([$class: 'WsCleanup'])
 
 }
