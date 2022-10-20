@@ -20,13 +20,12 @@ node {
       }
 
       stage("Wait") {
-        sh "echo 'waiting...'"
-        sh "env"
+        echo 'waiting...'
+        env
         //sh "echo 'Jobname é: '${env.JOBNAME}"
-        sh 'echo "Running $BUILD_ID on $JENKINS_URL"'
         echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
 
-        sh "sleep 30"
+        sleep 30
       }
 
    }
