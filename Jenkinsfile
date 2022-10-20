@@ -23,7 +23,7 @@ node {
         sh "echo 'waiting...'"
         sh "env"
         //sh "echo 'Jobname é: '${env.JOBNAME}"
-        sh "echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}""
+        sh "echo "Running $BUILD_ID on $JENKINS_URL""
 
         sh "sleep 30"
       }
