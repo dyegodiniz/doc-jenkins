@@ -16,6 +16,7 @@ node {
 
       stage("Deploy") {
         sh "echo 'deploying...'"
+        sh "curl google.com.br -v"
       }
 
       stage("Wait") {
