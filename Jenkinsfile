@@ -14,13 +14,7 @@ node {
         sh "php composer-setup.php"
       }
 
-      stage("Install dependencies") {
-        sh "php composer.phar install"
-      }
-
-      stage("Run tests") {
-        sh "vendor/bin/phpunit"
-      }
+      
 
    }
 
