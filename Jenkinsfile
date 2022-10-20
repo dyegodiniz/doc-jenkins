@@ -1,19 +1,32 @@
-pipeline {
-    agent any
-    stages {
-        stage('Build') {
-            agent {
-                docker {
-                    image 'gradle:6.7-jdk11'
-                    // Run the container on the node specified at the
-                    // top-level of the Pipeline, in the same workspace,
-                    // rather than on a new node entirely:
-                    reuseNode true
-                }
-            }
-            steps {
-                sh 'gradle --version'
-            }
-        }
-    }
+node {
+  stage("Main") {
+
+    checkout scm
+
+    docker.image('bitnami/php-fpm:latest').inside("-e COMPOSER_HOME=/tmp/jenkins-workspace") {
+
+      stage("Prepare folders") {
+        sh "mkdir /tmp/jenkins-workspace"
+      }
+
+      stage("Get Composer") {
+        sh "php -r \"copy('https://getcomposer.org/installer', 'composer-setup.php');\""
+        sh "php composer-setup.php"
+      }
+
+      stage("Install dependencies") {
+        sh "php composer.phar install"
+      }
+
+      stage("Run tests") {
+        sh "vendor/bin/phpunit"
+      }
+
+   }
+
+  }
+
+  // Clean up workspace
+  step([$class: 'WsCleanup'])
+
 }
