@@ -21,6 +21,7 @@ node {
 
       stage("Wait") {
         sh "echo 'waiting...'"
+        sh "env"
         sh "sleep 30"
       }
 
