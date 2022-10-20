@@ -5,16 +5,20 @@ node {
 
     docker.image('bitnami/php-fpm:latest').inside("-e COMPOSER_HOME=/tmp/jenkins-workspace --name=server1") {
 
-      stage("Prepare folders") {
-        sh "mkdir /tmp/jenkins-workspace"
+      stage("Build") {
+        sh "echo 'building...'"
       }
 
-      stage("Get Composer") {
-        sh "php -r \"copy('https://getcomposer.org/installer', 'composer-setup.php');\""
-        sh "php composer-setup.php"
+      stage("Test") {
+        sh "echo 'testing...'"
       }
 
-      stage("Aguardando") {
+      stage("Deploy") {
+        sh "echo 'deploying...'"
+      }
+
+      stage("Wait") {
+        sh "echo 'waiting...'"
         sh "sleep 30"
       }
 
