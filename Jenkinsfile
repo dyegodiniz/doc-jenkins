@@ -22,6 +22,7 @@ node {
       stage("Wait") {
         sh "echo 'waiting...'"
         sh "env"
+        sh "echo 'Jobname é: '${env.JOBNAME}"
         sh "sleep 30"
       }
 
