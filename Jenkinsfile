@@ -24,6 +24,7 @@ node {
         sh "env"
         //sh "echo 'Jobname é: '${env.JOBNAME}"
         sh 'echo "Running $BUILD_ID on $JENKINS_URL"'
+        echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
 
         sh "sleep 30"
       }
