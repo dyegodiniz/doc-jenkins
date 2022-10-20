@@ -14,7 +14,9 @@ node {
         sh "php composer-setup.php"
       }
 
-      
+      stage("Aguardando") {
+        sh "sleep 30"
+      }
 
    }
 
