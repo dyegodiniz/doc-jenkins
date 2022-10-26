@@ -1,38 +1,17 @@
-node {
-  stage("Main") {
-
-    checkout scm
-
-    //docker.image('bitnami/php-fpm:latest').inside("-e COMPOSER_HOME=/tmp/jenkins-workspace --name=server1") {
-      docker.image('nginx:latest').inside("-e COMPOSER_HOME=/tmp/jenkins-workspace --name=nginx") {
-
-      stage("Build") {
-        sh "echo 'building...'"
-      }
-
-      stage("Test") {
-        sh "echo 'testing...'"
-      }
-
-      stage("Deploy") {
-        sh "echo 'deploying...'"
-        sh "curl google.com.br -v"
-      }
-
-      stage("Wait") {
-        echo 'waiting...'
-        env
-        //sh "echo 'Jobname é: '${env.JOBNAME}"
-        echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
-
-        sleep 30
-      }
-
-   }
-
+pipeline {
+  agent { node { label 'centos7-docker' } }
+    
+  options {
+      ansiColor('xterm')
   }
 
-  // Clean up workspace
-  //step([$class: 'WsCleanup'])
+  stages {
+    stage('test stage') {
+      steps {
+        sh "echo hello world"
+      }
+    }
+  }
+
 
 }
