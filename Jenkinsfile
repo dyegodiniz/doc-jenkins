@@ -11,8 +11,16 @@ pipeline {
       steps {
         sh "echo hello world"
         sh "printenv"
+        sh "pdw"
+
+        dir("/app") {
+          sh "ls -l"
+        }
+
       }
     }
+
+    
   }
 
 
