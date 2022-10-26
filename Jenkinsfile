@@ -15,6 +15,7 @@ pipeline {
 
         dir("/app") {
           sh "ls -l"
+          sh "pwd"
         }
 
       }
