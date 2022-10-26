@@ -1,4 +1,5 @@
 #!/bin/bash
+# doc para utilizar a api do jenkins: https://bootvar.com/how-to-create-jenkins-job-using-api/
 
 JENKINS_USER=admin
 JENKINS_USER_API_TOKEN=118a20138166466ceba87231e31c533866
