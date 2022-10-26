@@ -11,7 +11,7 @@ pipeline {
       steps {
         sh "echo hello world"
         sh "printenv"
-        sh "pdw"
+        sh "pwd"
 
         dir("/app") {
           sh "ls -l"
