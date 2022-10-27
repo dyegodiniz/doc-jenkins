@@ -1,6 +1,6 @@
 pipeline {
-  agent { node { label 'test-docker' } }
-  //agent any
+  //agent { node { label 'test-docker' } }
+  agent any
     
   // options {
   //     ansiColor('xterm')
