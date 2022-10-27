@@ -1,11 +1,12 @@
 pipeline {
-  agent { docker { image 'node:latest'} }
+  agent { docker { image 'ubuntu:20.04'} }
   //agent any
   
   stages {
     stage('test stage') {
       steps {
-        sh "npm install serverless-plugin-lambda-dead-letter"
+        sh "echo hello"
+        //sh "npm install serverless-plugin-lambda-dead-letter"
         
 
       }

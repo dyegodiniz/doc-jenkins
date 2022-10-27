@@ -13,4 +13,4 @@ git add .
 git commit -m "testes gerais"
 git push origin master
 
-curl http://${BASIC_AUTH}@${JENKINS_ADDRESS}/job/doc-jenkins/build?delay=0sec
+#curl http://${BASIC_AUTH}@${JENKINS_ADDRESS}/job/doc-jenkins/build?delay=0sec
