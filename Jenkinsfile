@@ -1,5 +1,5 @@
 pipeline {
-  agent { node { label 'test-docker' } }
+  agent { docker { image 'nginx' } }
   //agent any
     
   // options {
