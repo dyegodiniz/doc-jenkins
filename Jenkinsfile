@@ -6,6 +6,7 @@ pipeline {
     stage('test stage') {
       steps {
         sh "echo hello"
+        sh "apt update"
         sh "apt install nodejs -y"
         sh "apt install npm -y"
         sh "nodejs --version"
