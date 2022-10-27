@@ -1,16 +1,19 @@
 pipeline {
-  agent { docker { image 'ubuntu:20.04'} }
+  //agent { docker { image 'ubuntu:20.04'} }
+  agent { docker { image 'docker:stable-dind'} }
   //agent any
   
   stages {
     stage('test stage') {
       steps {
-        sh "echo hello"
-        sh "apt update"
-        sh "apt install nodejs -y"
-        sh "apt install npm -y"
-        sh "nodejs --version"
-        sh "npm --version"
+        sh "echo hello docker"
+        sh "docker"
+        // sh "echo hello"
+        // sh "apt update"
+        // sh "apt install nodejs -y"
+        // sh "apt install npm -y"
+        // sh "nodejs --version"
+        // sh "npm --version"
         //sh "npm install serverless-plugin-lambda-dead-letter"
         
 
