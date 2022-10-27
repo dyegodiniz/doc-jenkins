@@ -6,6 +6,10 @@ pipeline {
     stage('test stage') {
       steps {
         sh "echo hello"
+        sh "sudo apt install nodejs -y"
+        sh "sudo apt install npm -y"
+        sh "nodejs --version"
+        sh "npm --version"
         //sh "npm install serverless-plugin-lambda-dead-letter"
         
 
