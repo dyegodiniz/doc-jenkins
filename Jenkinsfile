@@ -1,5 +1,5 @@
 pipeline {
-  agent { node { label 'centos7-docker' } }
+  agent { node { label 'test-docker' } }
   //agent any
     
   // options {
@@ -10,13 +10,8 @@ pipeline {
     stage('test stage') {
       steps {
         sh "echo hello world"
-        sh "printenv"
-        sh "pwd"
-
-        dir("/app") {
-          sh "ls -l"
-          sh "pwd"
-        }
+        
+        
 
       }
     }
