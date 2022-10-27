@@ -1,13 +1,11 @@
 pipeline {
-  agent { docker { image 'nginx' name 'nginx' } }
+  agent { docker { image 'node:latest'} }
   //agent any
   
   stages {
     stage('test stage') {
       steps {
-        sh "echo hello world"
-        sh "cat /etc/*release"
-        sh "sleep 60"
+        sh "npm install serverless-plugin-lambda-dead-letter"
         
 
       }
