@@ -7,14 +7,8 @@ pipeline {
     stage('test stage') {
       steps {
         sh "echo hello docker"
-        sh "docker"
-        // sh "echo hello"
-        // sh "apt update"
-        // sh "apt install nodejs -y"
-        // sh "apt install npm -y"
-        // sh "nodejs --version"
-        // sh "npm --version"
-        //sh "npm install serverless-plugin-lambda-dead-letter"
+        sh "docker build -t teste:teste ."
+        
         
 
       }
