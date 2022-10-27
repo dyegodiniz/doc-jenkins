@@ -10,7 +10,7 @@ pipeline {
     stage('test stage') {
       steps {
         sh "echo hello world"
-        
+        sh "cat /etc/*release"
         
 
       }
