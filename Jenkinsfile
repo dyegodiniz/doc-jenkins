@@ -1,6 +1,6 @@
 pipeline {
-  //agent { node { label 'centos7-docker' } }
-  agent any
+  agent { node { label 'centos7-docker' } }
+  //agent any
     
   // options {
   //     ansiColor('xterm')
