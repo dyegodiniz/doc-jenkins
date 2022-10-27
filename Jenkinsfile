@@ -1,5 +1,5 @@
 pipeline {
-  agent { docker { image 'nginx' --name nginx } }
+  agent { docker { image 'nginx' name 'nginx' } }
   //agent any
   
   stages {
