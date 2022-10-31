@@ -16,11 +16,16 @@ pipeline {
 
     stage('test dir') {
       steps {
+        sh "echo primeiro-pwd"
+        sh "pwd"
+
         dir("dir1") {
+          sh "echo dir1"
           sh "pwd"
           sh "ls -lhtra"
         }
         dir("dir2") {
+          sh "echo dir2"
           sh "pwd"
           sh "ls -lhtra"
         }
