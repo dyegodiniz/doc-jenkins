@@ -14,13 +14,13 @@ pipeline {
       }
     }
 
-    stage('test dir') {
-      steps {
-        dir(dir1) {
-          sh "ls -lhtra"
-        }
-      }
-    }
+    // stage('test dir') {
+    //   steps {
+    //     dir(dir1) {
+    //       sh "ls -lhtra"
+    //     }
+    //   }
+    // }
 
     
   }
