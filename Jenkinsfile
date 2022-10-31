@@ -20,6 +20,10 @@ pipeline {
           sh "pwd"
           sh "ls -lhtra"
         }
+        dir("dir2") {
+          sh "pwd"
+          sh "ls -lhtra"
+        }
       }
     }
 
